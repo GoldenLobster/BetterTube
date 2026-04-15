@@ -1,8 +1,7 @@
-import logicalSpec from 'stylelint-use-logical-spec'
 import a11y from '@double-great/stylelint-a11y'
 /** @type {import('stylelint').Config} */
 export default {
-  plugins: [logicalSpec, ...a11y],
+  plugins: [...a11y],
   extends: ['stylelint-config-standard', 'stylelint-config-sass-guidelines'],
   overrides: [
     {
@@ -33,7 +32,6 @@ export default {
         ignorePseudoClasses: ['deep', 'global']
       }
     ],
-    'a11y/no-outline-none': true,
-    'liberty/use-logical-spec': ['always']
+    'a11y/no-outline-none': true
   }
 }

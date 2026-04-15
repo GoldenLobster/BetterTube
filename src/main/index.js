@@ -969,6 +969,7 @@ function runApp() {
       webPreferences: {
         webSecurity: false,
         backgroundThrottling: false,
+        webviewTag: true,
         preload: process.env.NODE_ENV === 'development'
           ? path.resolve(__dirname, '../../dist/preload.js')
           : path.resolve(__dirname, 'preload.js')

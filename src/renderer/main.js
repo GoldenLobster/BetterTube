@@ -3,6 +3,7 @@ import i18n from './i18n/index'
 import router from './router/index'
 import store from './store/index'
 import App from './App.vue'
+import { initializePlugins } from './plugins'
 import { showExternalPlayerUnsupportedActionToast, showToast } from './helpers/utils'
 import { library } from './fontawesome-minimal'
 // import the styles
@@ -275,8 +276,14 @@ app
   .use(store)
   .use(i18n)
 
+const pluginRuntimePromise = initializePlugins({ app, router, store })
+
 router.isReady().then(() => {
   app.mount('#app')
+
+  pluginRuntimePromise.then((pluginRuntime) => {
+    pluginRuntime?.onAppMounted()
+  })
 })
 
 // to avoid accessing electron api from web app build

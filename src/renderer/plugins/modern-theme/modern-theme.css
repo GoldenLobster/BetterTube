@@ -1,0 +1,52 @@
+.plugin-theme-youtube-modern {
+  --plugin-yt-accent: #f03;
+  --plugin-yt-accent-soft: #ff365d;
+  --plugin-yt-bg: #111214;
+  --plugin-yt-surface: #1b1d21;
+  --plugin-yt-surface-2: #24272d;
+  --plugin-yt-text: #f4f4f4;
+  --plugin-yt-muted: #b5b8c1;
+}
+
+.plugin-theme-youtube-modern .app {
+  background:
+    radial-gradient(1600px 800px at 5% -5%, rgb(255 0 51 / 20%), transparent 50%),
+    radial-gradient(1200px 700px at 95% 5%, rgb(255 54 93 / 14%), transparent 50%),
+    var(--plugin-yt-bg);
+}
+
+.plugin-theme-youtube-modern .topNav,
+.plugin-theme-youtube-modern .sideNav,
+.plugin-theme-youtube-modern .ft-card,
+.plugin-theme-youtube-modern .settingsContent,
+.plugin-theme-youtube-modern .routerView {
+  border-color: color-mix(in srgb, var(--plugin-yt-accent-soft) 24%, transparent);
+}
+
+.plugin-theme-youtube-modern .sideNav .inner,
+.plugin-theme-youtube-modern .topNav {
+  background: linear-gradient(180deg, rgb(33 35 40 / 92%) 0%, rgb(22 23 27 / 90%) 100%);
+  backdrop-filter: blur(8px);
+}
+
+.plugin-theme-youtube-modern .navOption,
+.plugin-theme-youtube-modern .ft-input,
+.plugin-theme-youtube-modern .ft-button,
+.plugin-theme-youtube-modern .settingsToggle {
+  border-radius: 12px;
+}
+
+.plugin-theme-youtube-modern .navOption.router-link-active,
+.plugin-theme-youtube-modern .navOption:hover {
+  background: linear-gradient(90deg, var(--plugin-yt-accent) 0%, var(--plugin-yt-accent-soft) 100%);
+  color: var(--plugin-yt-text);
+}
+
+.plugin-theme-youtube-modern .plugin-navigation-tabs {
+  background: rgb(18 19 22 / 94%);
+  border-color: rgb(255 54 93 / 50%);
+}
+
+.plugin-theme-youtube-modern .plugin-navigation-tab--active {
+  background: linear-gradient(90deg, var(--plugin-yt-accent) 0%, var(--plugin-yt-accent-soft) 100%);
+}
